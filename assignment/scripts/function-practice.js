@@ -79,9 +79,9 @@ console.log(getLast(arr2));
 
 let newArr = ['video-games', 'movies', 'Duolingo', 'drawing'];
 
-function find(value, array) {
-   for (newArrSpec of newArr){
-    if (newArrSpec === value){
+function find(value, array){
+   for (arrayspec of array){
+    if (arrayspec === value){
       return true;
     } 
    }
@@ -109,9 +109,11 @@ console.log(isFirstLetter('I', "I'm going to eat this apple"));
 let giantArr = [5, 8, 7, 9, 10, 13, 526, 89, 2, 7, 64];
 
 // 9. Function to return the sum of all numbers in an array
+let sum = 0;
+
 function sumAll(array) {
-  let sum = 0;
   // TODO: loop to add items
+  let sum = 0;
   for (i = 0; i < array.length; i++){
     sum += array[i];
   }
@@ -125,10 +127,22 @@ console.log(sumAll(giantArr));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-function allPositive() {
 
-}
+let inputArray = [4, -1, 6, 7, -5, 30, 45];
 
+function allPositive(inputArray) {
+  let positiveArray = [];
+  for (i = 0; i < inputArray.length; i++) {
+    if (inputArray[i] > 0){
+      positiveArray.push(inputArray[i]);
+    }
+  }
+  return positiveArray;
+  }
+
+console.log(allPositive(inputArray));
+
+/* It always seems to be a struggle of scope but I fixed it! */
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
